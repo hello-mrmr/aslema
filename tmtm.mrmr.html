@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌟 Maryem & Hatem's Fairytale 🌟</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pink: #ff9bb3;
+            --dark-pink: #ff6b8b;
+            --light-pink: #ffdfe9;
+            --gold: #ffd700;
+            --white: #fff9fb;
+            --text: #5a3a4a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: var(--white);
+            color: var(--text);
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.8;
+            background-image: url('us.jpg');
+            background-attachment: fixed;
+            background-size: 300px;
+            background-blend-mode: overlay;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Magical Header */
+        .enchanted-header {
+            background: linear-gradient(135deg, var(--pink), var(--dark-pink));
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(255, 107, 139, 0.3);
+        }
+        
+        .enchanted-header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('hearts.jpeg');
+            opacity: 0.1;
+            pointer-events: none;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 3px 3px 0 rgba(0,0,0,0.1);
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: "❤";
+            position: absolute;
+            right: -30px;
+            top: -15px;
+            font-size: 2rem;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .subtitle {
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .couple-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .couple-photo:hover {
+            transform: scale(1.05) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        /* Magical Navigation */
+        .fairy-nav {
+            background-color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(255, 107, 139, 0.1);
+            border-bottom: 1px solid var(--light-pink);
+        }
+        
+        .fairy-nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .fairy-nav a {
+            color: var(--dark-pink);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .fairy-nav a:hover {
+            background-color: var(--light-pink);
+            transform: translateY(-2px);
+        }
+        
+        .fairy-nav a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--gold);
+            transition: all 0.3s ease;
+        }
+        
+        .fairy-nav a:hover::after {
+            width: 50%;
+            left: 25%;
+        }
+        
+        /* Storybook Container */
+        .storybook {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        
+        /* Enchanted Sections */
+        .spell-section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 5px 20px rgba(255, 155, 179, 0.1);
+            border: 1px solid var(--light-pink);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .spell-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50px;
+            height: 50px;
+            background-image: url('https://i.imgur.com/5XJQJZc.png');
+            background-size: contain;
+            opacity: 0.1;
+        }
+        
+        h2 {
+            color: var(--dark-pink);
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(to right, var(--pink), var(--gold));
+            margin: 0.5rem auto;
+            border-radius: 3px;
+        }
+        
+        /* Love Potion Question Boxes */
+        .love-potion {
+            background-color: var(--light-pink);
+            padding: 1.8rem;
+            border-radius: 12px;
+            margin-bottom: 1.8rem;
+            border-left: 5px solid var(--dark-pink);
+            box-shadow: 3px 3px 10px rgba(255, 107, 139, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .love-potion:hover {
+            transform: translateY(-3px);
+            box-shadow: 5px 5px 15px rgba(255, 107, 139, 0.2);
+        }
+        
+        .love-potion::before {
+            content: "✨";
+            position: absolute;
+            left: -10px;
+            top: -10px;
+            font-size: 1.2rem;
+        }
+        
+        h3 {
+            color: var(--dark-pink);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        h3::before {
+            content: "❤";
+            margin-right: 10px;
+            font-size: 1rem;
+        }
+        
+        .answer-field {
+            width: 100%;
+            min-height: 100px;
+            padding: 1rem;
+            border: 1px solid #ffc0cb;
+            border-radius: 8px;
+            resize: vertical;
+            font-family: 'Montserrat', sans-serif;
+            background-color: rgba(255, 255, 255, 0.8);
+            transition: all 0.3s ease;
+        }
+        
+        .answer-field:focus {
+            outline: none;
+            border-color: var(--dark-pink);
+            box-shadow: 0 0 0 3px rgba(255, 107, 139, 0.2);
+        }
+        
+        /* Magical Buttons */
+        .magic-btn {
+            background: linear-gradient(135deg, var(--pink), var(--dark-pink));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            margin: 1.5rem auto 0;
+            display: block;
+            box-shadow: 0 4px 10px rgba(255, 107, 139, 0.3);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .magic-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255, 107, 139, 0.4);
+        }
+        
+        .magic-btn:active {
+            transform: translateY(1px);
+        }
+        
+        .magic-btn::after {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                to bottom right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.8) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(30deg);
+            animation: shine 3s infinite;
+        }
+        
+        /* Storybook Footer */
+        .fairytale-footer {
+            background: linear-gradient(135deg, var(--pink), var(--dark-pink));
+            color: white;
+            text-align: center;
+            padding: 2.5rem;
+            margin-top: 3rem;
+            position: relative;
+        }
+        
+        .fairytale-footer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 10px;
+            background: linear-gradient(90deg, var(--gold), white, var(--gold));
+        }
+        
+        /* Floating Hearts Animation */
+        .floating-hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        
+        .heart {
+            position: absolute;
+            opacity: 0;
+            animation: float 6s ease-in infinite;
+            color: var(--pink);
+        }
+        
+        /* Storybook Section */
+        .storybook-pages {
+            background-color: #fff5f7;
+            border-radius: 15px;
+            padding: 3rem;
+            margin-top: 3rem;
+            border: 1px solid var(--light-pink);
+            box-shadow: 0 10px 30px rgba(255, 155, 179, 0.2);
+        }
+        
+        .storybook-pages h2 {
+            margin-bottom: 2rem;
+        }
+        
+        .story-chapter {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px dashed var(--pink);
+        }
+        
+        .story-chapter h3 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: var(--dark-pink);
+            margin-bottom: 1.5rem;
+            display: block;
+        }
+        
+        .story-chapter h3::before {
+            display: none;
+        }
+        
+        .story-answer {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 3px 10px rgba(255, 155, 179, 0.1);
+            position: relative;
+        }
+        
+        .story-answer::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--pink), var(--gold));
+        }
+        
+        .story-answer h4 {
+            color: var(--dark-pink);
+            margin-bottom: 0.8rem;
+            font-size: 1.2rem;
+        }
+        
+        .print-btn {
+            background: linear-gradient(135deg, var(--gold), #ffc800);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin: 2rem auto 0;
+            display: block;
+            box-shadow: 0 4px 10px rgba(255, 200, 0, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .print-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 15px rgba(255, 200, 0, 0.4);
+        }
+        
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes shine {
+            0% {
+                left: -50%;
+                top: -50%;
+            }
+            100% {
+                left: 150%;
+                top: 150%;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .fairy-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .spell-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating Hearts -->
+    <div class="floating-hearts" id="hearts-container"></div>
+    
+    <!-- Enchanted Header -->
+    <header class="enchanted-header">
+        <h1>Maryem & Hatem</h1>
+        <p class="subtitle">Our Fairytale Love Story</p>
+        <img src="quby.jpg" class="couple-photo" id="couple-photo">
+    </header>
+    
+    <!-- Fairy Navigation -->
+    <nav class="fairy-nav">
+        <ul>
+            <li><a href="#how-we-met">First Meeting</a></li>
+            <li><a href="#about-us">About Us</a></li>
+            <li><a href="#love-story">Love Story</a></li>
+            <li><a href="#special-things">Special Things</a></li>
+            <li><a href="#future">Our Future</a></li>
+            <li><a href="#storybook">Storybook</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Magical Storybook -->
+    <div class="storybook">
+        <!-- How We Met -->
+        <section class="spell-section" id="how-we-met">
+            <h2>✨ How Our Fairytale Began ✨</h2>
+            
+            <div class="love-potion">
+                <h3>Where and when did our magical story begin?</h3>
+                <textarea class="answer-field" id="meet-place"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What were your first thoughts when your eyes met?</h3>
+                <textarea class="answer-field" id="first-thoughts"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>Was it love at first sight or did the magic grow slowly?</h3>
+                <textarea class="answer-field" id="connection-type"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>How did the first magical conversation go?</h3>
+                <textarea class="answer-field" id="first-conversation"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>Any funny or awkward moments from our first meeting?</h3>
+                <textarea class="answer-field" id="funny-moments"></textarea>
+            </div>
+            
+            <button class="magic-btn" onclick="saveSection('how-we-met')">Save :)</button>
+        </section>
+        
+        <!-- About Us -->
+        <section class="spell-section" id="about-us">
+            <h2>🌠 About Our Selves 🌠</h2>
+            
+            <div class="love-potion">
+                <h3>How would you describe your wonderful personalities?</h3>
+                <textarea class="answer-field" id="personalities"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What hobbies and dreams do you share?</h3>
+                <textarea class="answer-field" id="shared-hobbies"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What makes your love story unique from others?</h3>
+                <textarea class="answer-field" id="unique-love"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>How do your differences make your relationship stronger?</h3>
+                <textarea class="answer-field" id="differences-strength"></textarea>
+            </div>
+            
+            <button class="magic-btn" onclick="saveSection('about-us')">Save :)</button>
+        </section>
+        
+        <!-- Love Story -->
+        <section class="spell-section" id="love-story">
+            <h2>💞 Our Love's Journey 💞</h2>
+            
+            <div class="love-potion">
+                <h3>When did you realize this was true love?</h3>
+                <textarea class="answer-field" id="realize-love"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>Describe your first magical date</h3>
+                <textarea class="answer-field" id="first-date"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What's your most romantic memory together?</h3>
+                <textarea class="answer-field" id="romantic-memory"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What challenges have you overcome together?</h3>
+                <textarea class="answer-field" id="challenges"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What's the funniest moment you've shared?</h3>
+                <textarea class="answer-field" id="funniest-moment"></textarea>
+            </div>
+            
+            <button class="magic-btn" onclick="saveSection('love-story')">Save :)</button>
+        </section>
+        
+        <!-- Special Things -->
+        <section class="spell-section" id="special-things">
+            <h2>🌟 Our Special Magic 🌟</h2>
+            
+            <div class="love-potion">
+                <h3>What first attracted you to each other?</h3>
+                <textarea class="answer-field" id="attraction"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What's the sweetest thing you've done for each other?</h3>
+                <textarea class="answer-field" id="sweetest-thing"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What special nicknames or inside jokes do you have?</h3>
+                <textarea class="answer-field" id="nicknames"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What little things remind you of each other?</h3>
+                <textarea class="answer-field" id="reminders"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>How would you describe your relationship in one magical sentence?</h3>
+                <textarea class="answer-field" id="relationship-description"></textarea>
+            </div>
+            
+            <button class="magic-btn" onclick="saveSection('special-things')">Save :)</button>
+        </section>
+        
+        <!-- Future -->
+        <section class="spell-section" id="future">
+            <h2>🔮 Our Future 🔮</h2>
+            
+            <div class="love-potion">
+                <h3>Where do you see yourselves in 5 years?</h3>
+                <textarea class="answer-field" id="five-years"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What dreams do you want to fulfill together?</h3>
+                <textarea class="answer-field" id="dreams"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>Where would you love to travel together?</h3>
+                <textarea class="answer-field" id="travel"></textarea>
+            </div>
+            
+            <div class="love-potion">
+                <h3>What promises do you want to make for your future?</h3>
+                <textarea class="answer-field" id="promises"></textarea>
+            </div>
+            
+            <button class="magic-btn" onclick="saveSection('future')">Save :)</button>
+        </section>
+        
+        <!-- Storybook -->
+        <section class="storybook-pages" id="storybook">
+            <h2>📖 Our Complete Love Storybook 📖</h2>
+            <div id="storybook-content">
+                <!-- Generated content will appear here -->
+            </div>
+            
+            <button class="print-btn" onclick="window.print()">Print :) </button>
+        </section>
+    </div>
+    
+    <!-- Fairytale Footer -->
+    <footer class="fairytale-footer">
+        <p>✨ LETS BUILD OUR STORY :)) ✨</p>
+    </footer>
+
+    <script>
+        // Create floating hearts
+        function createHearts() {
+            const container = document.getElementById('hearts-container');
+            const heartCount = 15;
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.classList.add('heart');
+                heart.innerHTML = '❤';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+                heart.style.animationDuration = (Math.random() * 6 + 3) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(heart);
+            }
+        }
+        
+        // Save section to localStorage
+        function saveSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const inputs = section.querySelectorAll('.answer-field');
+            
+            inputs.forEach(input => {
+                localStorage.setItem(input.id, input.value);
+            });
+            
+            // Show magical confirmation
+            const btn = section.querySelector('.magic-btn');
+            btn.textContent = 'Saved! ✨';
+            setTimeout(() => {
+                btn.textContent = 'Save This Chapter ✨';
+            }, 2000);
+            
+            // Update storybook
+            generateStorybook();
+        }
+        
+        // Generate the storybook content
+        function generateStorybook() {
+            const contentDiv = document.getElementById('storybook-content');
+            contentDiv.innerHTML = '';
+            
+            // Check if any sections are saved
+            const savedSections = [
+                'how-we-met', 'about-us', 'love-story', 
+                'special-things', 'future'
+            ].filter(section => {
+                const inputs = document.querySelectorAll(`#${section} .answer-field`);
+                return Array.from(inputs).some(input => localStorage.getItem(input.id));
+            });
+            
+            if (savedSections.length === 0) {
+                contentDiv.innerHTML = '<p class="empty-story">Your fairytale will appear here as you save chapters...</p>';
+                return;
+            }
+            
+            // Generate content for each saved section
+            savedSections.forEach(section => {
+                const sectionDiv = document.createElement('div');
+                sectionDiv.className = 'story-chapter';
+                
+                // Add section title
+                const title = document.createElement('h3');
+                title.textContent = getSectionTitle(section);
+                sectionDiv.appendChild(title);
+                
+                // Add answers
+                const inputs = document.querySelectorAll(`#${section} .answer-field`);
+                inputs.forEach(input => {
+                    const answer = localStorage.getItem(input.id);
+                    if (answer) {
+                        const answerDiv = document.createElement('div');
+                        answerDiv.className = 'story-answer';
+                        
+                        const question = document.createElement('h4');
+                        question.textContent = input.previousElementSibling.textContent;
+                        
+                        const answerText = document.createElement('p');
+                        answerText.textContent = answer;
+                        
+                        answerDiv.appendChild(question);
+                        answerDiv.appendChild(answerText);
+                        sectionDiv.appendChild(answerDiv);
+                    }
+                });
+                
+                contentDiv.appendChild(sectionDiv);
+            });
+        }
+        
+        // Get pretty section titles
+        function getSectionTitle(sectionId) {
+            const titles = {
+                'how-we-met': '✨ Chapter 1: How Our Fairytale Began ✨',
+                'about-us': '🌠 Chapter 2: About Our Magical Selves 🌠',
+                'love-story': '💞 Chapter 3: Our Love\'s Magical Journey 💞',
+                'special-things': '🌟 Chapter 4: Our Special Magic 🌟',
+                'future': '🔮 Chapter 5: Our Magical Future 🔮'
+            };
+            return titles[sectionId] || sectionId;
+        }
+        
+        // Load saved answers when page loads
+        function loadSavedAnswers() {
+            document.querySelectorAll('.answer-field').forEach(input => {
+                const saved = localStorage.getItem(input.id);
+                if (saved) {
+                    input.value = saved;
+                }
+            });
+            
+            // Set current date
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', options);
+        }
+        
+        // Initialize everything when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+            loadSavedAnswers();
+            generateStorybook();
+            
+            // Smooth scrolling for navigation
+            document.querySelectorAll('.fairy-nav a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
